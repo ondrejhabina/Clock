@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/GitHub/Clock/css/main.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>Clock</title>
+</head>
+<body>
+    <section class="time">
+        <div class="part-of-day">
+            <i id="symbol" class="material-icons">wb_sunny</i><p class="greeting">Good <p id="day-part">morning</p><p id="date">1.11.2021</p></p>
+        </div>
+        <div class="analog-time">
+            <p id="current-time"><p id="hours"> 13:</p><p id="minutes">14</p><p id="seconds" class="seconds">01</p></p>
+        </div>
+        <div class="timezone">
+            <p id="time-zone-txt">London</p>
+        </div>
+    </section>
+    <button id='more-btn' class="more-btn"><i class="material-icons">more_horiz</i><i id="arrow" class="material-icons">expand_less</i></button>
+    <section class="more-content-wrapper">
+        <div class="more-content">
+            <div class="day-of-the-year">
+                <p class="more-description">Day of the year</p>
+                <p id="day-year-value" class="more-values">354</p>
+            </div>
+            <div class="day-of-the-week">
+                <p class="more-description">Day of the week</p>
+                <p id="day-week-value" class="more-values">4</p>
+            </div>
+            <div class="week-number bottom-row">
+                <p class="more-description">Week number</p>
+                <p id="week-number-value" class="more-values">48</p>
+            </div>
+            <div class="time-zone-more bottom-row">
+                <p class="more-description">Timezone Continent</p>
+                <p id="time-zone-value" class="more-values">London</p>
+                <p id="cont-zone-value" class="more-values">Europe</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

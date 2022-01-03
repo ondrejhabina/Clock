@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Space+Mono:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../img/daytheme.jpg");
+  background-size: cover;
+  background-repeat: repeat-x;
+  width: 100vw;
+  height: 45vh;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+}
+body .more-btn {
+  background-color: #000000;
+  color: #ffffff;
+  width: auto;
+  min-width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 40px;
+  opacity: 80%;
+  position: relative;
+  left: 50%;
+}
+body .more-btn:hover {
+  background-color: #3d3d3d;
+}
+
+.time {
+  height: 65%;
+  min-height: 250px;
+  width: 85%;
+  margin: auto;
+  margin-top: 10%;
+  display: grid;
+  grid-template-rows: 10% 50% 10%;
+  align-items: center;
+}
+.time .part-of-day {
+  grid-row: 1;
+  display: inline-flex;
+  gap: 10px;
+}
+.time .analog-time {
+  grid-row: 2;
+  display: inline-flex;
+  font-size: 120px;
+}
+.time .seconds {
+  align-self: center;
+  position: relative;
+  bottom: -35px;
+  font-size: 25px;
+}
+.time .time-zone {
+  grid-row: 3;
+}
+
+.more-content-wrapper {
+  background-color: #000000;
+  height: 450px;
+  width: 100vw;
+  z-index: 0;
+  opacity: 80%;
+  transition: 1s ease-in-out;
+}
+.more-content-wrapper .more-content {
+  background-color: #000000;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100% 100%;
+  width: 85%;
+  height: 50%;
+  z-index: 1;
+}
+.more-content-wrapper .more-content .day-of-the-year {
+  grid-row: 1;
+  grid-column: 1;
+  width: 50%;
+  height: 50%;
+  justify-self: center;
+  align-self: center;
+}
+.more-content-wrapper .more-content .day-of-the-week {
+  grid-row: 1;
+  grid-column: 2;
+  width: 50%;
+  height: 50%;
+  justify-self: center;
+  align-self: center;
+}
+.more-content-wrapper .more-content .week-number {
+  grid-row: 2;
+  grid-column: 1;
+  width: 50%;
+  height: 50%;
+  justify-self: center;
+  align-self: center;
+}
+.more-content-wrapper .more-content .time-zone-more {
+  grid-row: 2;
+  grid-column: 2;
+  width: 50%;
+  height: 50%;
+  justify-self: center;
+  align-self: center;
+}
+.more-content-wrapper .more-content #time-zone-value {
+  font-size: 44px;
+}
+.more-content-wrapper .more-content #cont-zone-value {
+  font-size: 44px;
+}
+.more-content-wrapper .more-content .more-description {
+  font-size: 14px;
+  color: #ffffff;
+}
+.more-content-wrapper .more-content .more-values {
+  font-size: 56px;
+}
+.more-content-wrapper .more-content .bottom-row {
+  align-self: start;
+}
+
+.material-icons {
+  font-size: 35px;
+}
+
+@media all and (max-width: 1000px) {
+  body {
+    width: 100%;
+  }
+  body .more-btn {
+    position: relative;
+    left: 35%;
+  }
+
+  .time .part-of-day {
+    font-size: 20px;
+  }
+  .time #symbol {
+    font-size: 35px;
+    font-size: 20px;
+  }
+  .time .analog-time {
+    font-size: 80px;
+  }
+
+  .more-content-wrapper .more-content #time-zone-value {
+    font-size: 20px;
+  }
+  .more-content-wrapper .more-content #cont-zone-value {
+    font-size: 20px;
+  }
+  .more-content-wrapper .more-content .bottom-row {
+    word-wrap: break-word;
+    width: 55%;
+  }
+}/*# sourceMappingURL=main.css.map */
