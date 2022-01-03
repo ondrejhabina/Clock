@@ -29,7 +29,6 @@ moreButton.addEventListener('click', ()=> {
 
 //API Section follows
 
-
 //time and date
 
 const currentDate = document.getElementById('date');
@@ -38,10 +37,31 @@ const currentSeconds = document.getElementById('seconds');
 const currentMinutes = document.getElementById('minutes');
 const currentHours = document.getElementById('hours');
 const daySymbol = document.getElementById('symbol');
+const dayOfTheYear = document.getElementById('day-year-value');
+const timeZoneValue = document.getElementById('time-zone-value');
+const dayOfTheWeek = document.getElementById('day-week-value');
+const weekNumber = document.getElementById('week-number-value');
 const docBody = document.body;
 
 function updateDateTime() {
     let today = new Date();
+    
+
+    let day = today.getDay();
+
+    //numbers of week, day etc.
+
+    getDayOfTheWeek(day);
+    
+    let dayOfYear = date => Math.floor((date - new Date(date.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+
+    let weekOfYear = Math.ceil(dayOfYear(today) / 7);
+    
+
+    dayOfTheYear.innerHTML = dayOfYear(today);
+    
+    weekNumber.innerHTML = weekOfYear;
+
     let date = `${today.getDate()}` + '.' + `${today.getMonth()+ 1}` + '.' + `${today.getFullYear()}`;
     let seconds = `${today.getSeconds()}`;
     let minutes = `${today.getMinutes()}`;
@@ -62,7 +82,32 @@ function updateDateTime() {
     currentHours.innerHTML = hours + ':';
     currentMinutes.innerHTML = minutes;
     currentSeconds.innerHTML = seconds;
-    
+}
+
+function getDayOfTheWeek(day) {
+    switch (day) {
+        case 0:
+            dayOfTheWeek.innerHTML = 'Sunday';
+            break;
+        case 1:
+            dayOfTheWeek.innerHTML = 'Monday';
+            break;
+        case 2:
+            dayOfTheWeek.innerHTML = 'Tuesday';
+            break;
+        case 3:
+            dayOfTheWeek.innerHTML = 'Wednesday';
+            break;
+        case 4:
+            dayOfTheWeek.innerHTML = 'Thursday';
+            break;
+        case 5:
+            dayOfTheWeek.innerHTML = 'Friday';
+            break;
+        case 6:
+            dayOfTheWeek.innerHTML = 'Saturday';
+            break;
+    }
 }
 
 
@@ -100,13 +145,15 @@ function greeting() {
 
 function nightTime() {
     daySymbol.innerHTML = 'nightlight_round';
-    docBody.style.backgroundImage = 'url("img/nighttheme.jpg")';
+    //docBody.style.backgroundImage = 'url("img/nighttheme.jpg")';
 }
 
 function dayTime() {
     daySymbol.innerHTML = 'wb_sunny';
-    docBody.style.backgroundImage = 'url("img/daytheme.jpg")';
+    //docBody.style.backgroundImage = 'url("img/daytheme.jpg")';
 }
+
+
 
 //Viewport dimensions used to determine which background image to use
 
